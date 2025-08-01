@@ -15,6 +15,8 @@
     --color-instragram:#EA4C89;
     --color-youtube:#CC181E;
     --color-linkedin: #F4A62A;
+    --color-bg-footer: #222222;
+    --color-bg-footer-dark: #111111;
 }
 
 
@@ -127,8 +129,10 @@ body {
     outline: none;
     border: none;
     transition: all 300ms ease-out;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }
+
 
 .search__input::placeholder {
     color: var(--color-primary);
@@ -678,7 +682,9 @@ body {
 .footer-post__views,
 .footer-post__comment,
 .recent__views,
-.recent__vcomment {
+.recent__vcomment,
+.list-popular__views,
+.list-popular__comment {
     color: var(--color-text-marquee);
     font-size: 1.1rem;
     font-weight: 400;
@@ -694,7 +700,9 @@ body {
 .footer-post__views > .fa-solid,
 .footer-post__comment  > .fa-solid,
 .recent__views > .fa-solid,
-.recent__vcomment  > .fa-solid {
+.recent__vcomment  > .fa-solid,
+.list-popular__views > .fa-solid,
+.list-popular__comment > .fa-solid {
     font-size: 1.2rem;
     margin-right: 0.2rem;
 }
@@ -1501,4 +1509,202 @@ body {
     color: var(--color-primary);
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
+}
+
+
+/*FOOTER*/
+.layout__footer {
+    width: 100%;
+    background-color: var(--color-bg-footer);
+}
+
+.footer__container_bottom {
+    color: var(--color-primary);
+    width: 55%;
+    min-width: 100rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.footer__left-container,
+.footer__center-container,
+.footer__right-container {
+    flex-basis: calc(33% - 1.5rem);
+}
+
+.footer__about {
+    margin-bottom: 3rem;
+}
+
+.about__title, 
+.tags__title,
+.footer__title {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.about__description {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+.tags__cotnainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tags__tag {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    background-color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 0.3rem;
+    transition: all 300ms ease;
+}
+
+.tags__tag:hover {
+    background-color: transparent;
+}
+
+.footer__list-popular {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.list-popular__item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.list-popular__container-img {
+    height: 7rem;
+    width: 7rem;
+    overflow: hidden;
+}
+
+.list-popular__img {
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease;
+}
+
+.list-popular__img:hover {
+    transform: scale(1.1);
+}
+
+.list-popular__detail {
+    flex-basis: 75%;
+}
+
+.list-popular__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.list-popular__container-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list-popular__author {
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    font-weight: 450;
+    text-transform: uppercase;
+}
+
+.list-popular__meta-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer__fslider {
+    width: 33rem;
+    height: 22rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.slider__img:hover {
+    transform: scale(1.1);
+}
+
+.fslider__info {
+    color: var(--color-primary);
+    text-align: center;
+    width: 100%;
+    top: 38%;
+    padding: 0 1rem;
+    position: absolute;
+}
+
+.fslider__category {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px var(--color-titles);
+    margin: 5px 0;
+    transition: all 300ms ease;
+}
+
+.fslider__category:hover {
+    color: var(--color-secondary);
+}
+
+.fslider__separator {
+    width: 6rem;
+    height: 0.2rem;
+    margin: 0.4rem auto;
+    background-color: var(--color-secondary);
+}
+
+.fslider__title {
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 3px var(--color-titles);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    transition: all 300ms ease;
+}
+
+.fslider__title:hover {
+    color: var(--color-secondary);
+}
+
+.footer__description {
+    color: var(--color-primary);
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--color-bg-footer-dark);
+}
+
+.footer__text {
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.footer__text > .fa-solid {
+    margin-left: 0.5rem;
 }
