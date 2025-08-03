@@ -139,7 +139,8 @@ body {
     opacity: 1;
 }
 
-.navbar__button {
+.navbar__button,
+.navbar__mobile-btn {
     background-color: var(--color-secondary);
     padding: 0.8rem 1.3rem;
     height: 100%;
@@ -147,9 +148,11 @@ body {
     align-items: center;
 }
 
-.navbar__icon {
+.navbar__icon,
+.navbar__mobile-btn .fa-solid {
     color: var(--color-primary);
     font-size: 2.7rem;
+    cursor: pointer;
 }
 
 
@@ -1375,7 +1378,7 @@ body {
 }
 
 .recent__container-img {
-    flex-basis: 30%;
+    /* flex-basis: 30%; */
     width: 7rem;
     height: 7rem;
     overflow: hidden;
